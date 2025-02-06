@@ -36,6 +36,6 @@ spec:
             - name: callsign
               value: {{ .Values.dapnet.callsign }}
             - name: envname
-              value: {{ .Values.envnane }}
+              value: {{ .Values.envname }}
             - name: period
               value: {{ .Values.period }}
