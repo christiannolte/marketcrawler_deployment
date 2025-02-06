@@ -28,7 +28,7 @@ spec:
             - name: telegramToken
               value: {{ .Values.telegram.telegramToken }}
             - name: telegramChannel
-              value: {{ .Values.telegram.telegramChannel }}
+              value: "{{ .Values.telegram.telegramChannel }}"
             - name: dapnet
               value: {{ .Values.dapnet.dapnetID }}
             - name: transmitterGroupName
@@ -38,4 +38,4 @@ spec:
             - name: envname
               value: {{ .Values.envname }}
             - name: period
-              value: {{ .Values.period }}
+              value: "{{ .Values.period }}"
