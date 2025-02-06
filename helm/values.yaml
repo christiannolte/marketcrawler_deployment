@@ -1,7 +1,7 @@
 marketcrawlerimage: christiannolte/newmarketcrawler:latest
 blogurl: "https://www.mikrocontroller.net/forum/markt"
 envname: NAME_YOUR_ENVIRONMENT
-period: "299"
+period: "300"
 telegram:
   telegramToken: TELEGRAMTOKEN
   telegramChannel: "TELEGRAMCHANNEL"
