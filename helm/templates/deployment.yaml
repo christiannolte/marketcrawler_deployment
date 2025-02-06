@@ -35,3 +35,7 @@ spec:
               value: {{ .Values.dapnet.transmitterGroupName }}
             - name: callsign
               value: {{ .Values.dapnet.callsign }}
+            - name: envname
+              value: {{ .Values.envmane }}
+            - name: period
+              value: {{ .Values.period }}

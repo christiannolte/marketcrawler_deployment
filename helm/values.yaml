@@ -1,8 +1,10 @@
 marketcrawlerimage: christiannolte/newmarketcrawler:latest
 blogurl: "https://www.mikrocontroller.net/forum/markt"
+envname: NAME_YOUR_ENVIRONMENT
+period: "300"
 telegram:
   telegramToken: TELEGRAMTOKEN
-  telegramChannel: TELEGRAMCHANNEL
+  telegramChannel: "TELEGRAMCHANNEL"
 dapnet:
   dapnetID: DAPNETID
   transmitterGroupName: dl-ni
