@@ -4,6 +4,7 @@ metadata:
   name: marketcrawler
   annotations:
     configuration/period: "{{ .Values.period }}"
+    configuration/transmittergroup: "{{ .Values.dapnet.transmitterGroupName }}"
   labels:
     app: marketcrawler
 spec:
