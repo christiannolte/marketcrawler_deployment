@@ -28,7 +28,7 @@ spec:
             - name: telegramToken
               value: {{ .Values.telegram.telegramToken }}
             - name: telegramChannel
-              value: {{ .Values.telegram.TelegramChannel }}
+              value: {{ .Values.telegram.telegramChannel }}
             - name: dapnet
               value: {{ .Values.dapnet.dapnetID }}
             - name: transmitterGroupName
