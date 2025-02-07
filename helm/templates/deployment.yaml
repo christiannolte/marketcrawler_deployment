@@ -5,6 +5,7 @@ metadata:
   annotations:
     configuration/period: "{{ .Values.period }}"
     configuration/transmittergroup: "{{ .Values.dapnet.transmitterGroupName }}"
+    configuration/errorwaittime: "{{ .Values.errorwaittime }}"
   labels:
     app: marketcrawler
 spec:
@@ -24,7 +25,7 @@ spec:
       containers:
         - name: marketcrawler
           image: {{ .Values.marketcrawlerimage }}
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: blogurl
               value: {{ .Values.blogurl }}
@@ -42,3 +43,5 @@ spec:
               value: {{ .Values.envname }}
             - name: period
               value: "{{ .Values.period }}"
+            - name: errorwaittime
+              value: "{{ .Values.errorwaittime }}"
