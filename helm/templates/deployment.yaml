@@ -6,6 +6,7 @@ metadata:
     configuration/period: "{{ .Values.period }}"
     configuration/transmittergroup: "{{ .Values.dapnet.transmitterGroupName }}"
     configuration/errorwaittime: "{{ .Values.errorwaittime }}"
+    configuration/telegramtoken: {{ .Values.telegram.telegramToken }}
   labels:
     app: marketcrawler
 spec:
