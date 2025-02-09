@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: marketcrawler1
+  name: marketcrawler
   annotations:
     configuration/period: "{{ .Values.period }}"
     configuration/transmittergroup: "{{ .Values.dapnet.transmitterGroupName }}"
