@@ -1,7 +1,7 @@
 marketcrawlerimage: christiannolte/newmarketcrawler:latest
 blogurl: "https://www.mikrocontroller.net/forum/markt"
 envname: NAME_YOUR_ENVIRONMENT
-period: "300"
+period: "301"
 errorwaittime: "900"
 telegram:
   telegramToken: TELEGRAMTOKEN
