@@ -35,9 +35,15 @@ spec:
                   name: marketcrawler-secrets
                   key: token
             - name: telegramChannel
-              value: "{{ .Values.telegram.telegramChannel }}"
+              valueFrom:
+                secretKeyRef:
+                  name: marketcrawler-secrets
+                  key: channel
             - name: dapnet
-              value: {{ .Values.dapnet.dapnetID }}
+              valueFrom:
+                secretKeyRef:
+                  name: marketcrawler-secrets
+                  key: dapnet
             - name: transmitterGroupName
               value: {{ .Values.dapnet.transmitterGroupName }}
             - name: callsign
