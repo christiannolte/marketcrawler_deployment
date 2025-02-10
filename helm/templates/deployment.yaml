@@ -29,8 +29,6 @@ spec:
           image: {{ .Values.marketcrawlerimage }}
           imagePullPolicy: Always
           env:
-            - name: blogurl
-              value: {{ .Values.blogurl }}
             - name: telegramToken
               value: {{ .Values.telegram.telegramToken }}
             - name: telegramChannel
