@@ -3,8 +3,8 @@ apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
 metadata:
   creationTimestamp: null
-  name: marketcrawler-secrets
-  namespace: marketcrawler
+  name: {{ .Release.Name }}-secrets
+  namespace: {{ .Release.Namespace }}
 spec:
   encryptedData:
     channel: {{ .Values.secret.channel }}
@@ -13,6 +13,6 @@ spec:
   template:
     metadata:
       creationTimestamp: null
-      name: marketcrawler-secrets
-      namespace: marketcrawler
+      name: {{ .Release.Name }}-secrets
+      namespace: {{ .Release.Namespace }}
     type: Opaque

@@ -1,48 +1,47 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: marketcrawler
+  name: {{ .Release.Name }}-deployment
   annotations:
     configuration/period: "{{ .Values.period }}"
     configuration/transmittergroup: "{{ .Values.dapnet.transmitterGroupName }}"
     configuration/errorwaittime: "{{ .Values.errorwaittime }}"
-    configuration/telegramtoken: {{ .Values.telegram.telegramToken }}
     configuration/environment: {{ .Values.envname }}
   labels:
-    app: marketcrawler
+    app: {{ .Release.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: marketcrawler
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: marketcrawler
+        app: {{ .Release.Name }}
     spec:
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: "Always" 
       restartPolicy: Always
       containers:
-        - name: marketcrawler
+        - name: {{ .Release.Name }}
           image: {{ .Values.marketcrawlerimage }}
           imagePullPolicy: Always
           env:
             - name: telegramToken
               valueFrom:
                 secretKeyRef:
-                  name: marketcrawler-secrets
+                  name: {{ .Release.Name }}-secrets
                   key: token
             - name: telegramChannel
               valueFrom:
                 secretKeyRef:
-                  name: marketcrawler-secrets
+                  name: {{ .Release.Name }}-secrets
                   key: channel
             - name: dapnet
               valueFrom:
                 secretKeyRef:
-                  name: marketcrawler-secrets
+                  name: {{ .Release.Name }}-secrets
                   key: dapnet
             - name: transmitterGroupName
               value: {{ .Values.dapnet.transmitterGroupName }}
