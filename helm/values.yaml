@@ -1,5 +1,4 @@
 marketcrawlerimage: christiannolte/newmarketcrawler:latest
-blogurl: "https://www.mikrocontroller.net/forum/markt"
 envname: NAME_YOUR_ENVIRONMENT
 period: "240"
 errorwaittime: "900"
