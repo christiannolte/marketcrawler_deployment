@@ -30,6 +30,10 @@ spec:
           imagePullPolicy: Always
           env:
             - name: telegramToken
+              valueFrom:
+                secretKeyRef:
+                  name: database-credentials
+                  key: token
               value: {{ .Values.telegram.telegramToken }}
             - name: telegramChannel
               value: "{{ .Values.telegram.telegramChannel }}"

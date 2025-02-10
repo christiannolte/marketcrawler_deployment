@@ -1,0 +1,18 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: marketcrawler-secrets
+  namespace: marketcrawler
+spec:
+  encryptedData:
+    channel: {{ .Values.secret.channel }}
+    dapnet: {{ .Values.secret.dapnet }}
+    token: {{ .Values.secret.token }}
+  template:
+    metadata:
+      creationTimestamp: null
+      name: marketcrawler-secrets
+      namespace: marketcrawler
+    type: Opaque
